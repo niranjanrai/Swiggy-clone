@@ -2943,58 +2943,11 @@ const App = ()=>{
     }, void 0, false);
 };
 _c = App;
-const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    children: " Hello world "
-}, void 0, false, {
+(0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "App.js",
     lineNumber: 10,
-    columnNumber: 17
-}, undefined);
-const main = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-    children: [
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: " Namaste React"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 12,
-            columnNumber: 5
-        }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Mango"
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 14,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Apple"
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 15,
-                    columnNumber: 7
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Grapes"
-                }, void 0, false, {
-                    fileName: "App.js",
-                    lineNumber: 16,
-                    columnNumber: 7
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "App.js",
-            lineNumber: 13,
-            columnNumber: 5
-        }, undefined)
-    ]
-}, void 0, true, {
-    fileName: "App.js",
-    lineNumber: 11,
-    columnNumber: 14
-}, undefined);
-(0, _client.createRoot)(el).render(main);
+    columnNumber: 23
+}, undefined));
 var _c;
 $RefreshReg$(_c, "App");
 

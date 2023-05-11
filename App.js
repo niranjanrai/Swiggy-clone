@@ -13,16 +13,4 @@ const App = () => {
   );
 };
 
-const heading = <h1> Hello world </h1>;
-const main = (
-  <div>
-    <h1> Namaste React</h1>
-    <ul>
-      <li>Mango</li>
-      <li>Apple</li>
-      <li>Grapes</li>
-    </ul>
-  </div>
-);
-
-createRoot(el).render(main);
+createRoot(el).render(<App />);
