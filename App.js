@@ -13,19 +13,16 @@ const App = () => {
   );
 };
 
-const heading = React.createElement(
-  "h1",
-  {
-    key: "title",
-  },
-  "heading"
+const heading = <h1> Hello world </h1>;
+const main = (
+  <div>
+    <h1> Namaste React</h1>
+    <ul>
+      <li>Mango</li>
+      <li>Apple</li>
+      <li>Grapes</li>
+    </ul>
+  </div>
 );
-const heading2 = React.createElement(
-  "h2",
-  {
-    key: "title2",
-  },
-  "heading2"
-);
-const container = React.createElement("div", {}, [heading, heading2]);
-createRoot(el).render(container);
+
+createRoot(el).render(main);
