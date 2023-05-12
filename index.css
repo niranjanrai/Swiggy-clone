@@ -7,3 +7,21 @@
 body {
   font-family: sans-serif;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+.nav-items > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items > ul > li {
+  list-style: none;
+
+  padding: 10px;
+}
