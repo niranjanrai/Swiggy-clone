@@ -6,12 +6,18 @@ const el = document.getElementById("root");
 const Title = () => {
   return (
     <>
-      <h1>Food Villa</h1>
+      <a href="/">
+        <img
+          className="logo"
+          src="https://lh3.googleusercontent.com/p/AF1QipMf9w4RomHXrUkQKvrxtPdjp3SLadP05HDzXlH2=w1080-h608-p-no-v0"
+          alt="logo"
+        />
+      </a>
     </>
   );
 };
 
-const HeaderComponent = () => {
+const Header = () => {
   return (
     <header>
       <Title />
@@ -28,6 +34,21 @@ const HeaderComponent = () => {
   );
 };
 
+const Body = () => {
+  return (
+    <>
+      <h4>Body</h4>
+    </>
+  );
+};
+
+const Footer = () => {
+  return (
+    <>
+      <h4> Footer </h4>
+    </>
+  );
+};
 const AppLayout = () => {
   return (
     <>
@@ -50,7 +71,9 @@ const AppLayout = () => {
        *
        */}
 
-      <HeaderComponent />
+      <Header />
+      <Body />
+      <Footer />
     </>
   );
 };

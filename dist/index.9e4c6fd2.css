@@ -9,6 +9,7 @@ body {
 }
 
 header {
+  border: 1px solid #000;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
@@ -22,8 +23,20 @@ header {
 }
 
 .nav-items > ul > li {
+  cursor: pointer;
   padding: 10px;
+  font-weight: 600;
   list-style: none;
+  transition: all .5s ease-in-out;
+}
+
+.nav-items > ul > li:hover {
+  color: #463007;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

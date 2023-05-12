@@ -13,6 +13,7 @@ header {
   justify-content: space-between;
   margin: 10px;
   align-items: center;
+  border: 1px solid black;
 }
 .nav-items > ul {
   display: flex;
@@ -22,6 +23,16 @@ header {
 
 .nav-items > ul > li {
   list-style: none;
-
+  font-weight: 600;
   padding: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.nav-items > ul > li:hover {
+  color: rgb(70, 48, 7);
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
 }
