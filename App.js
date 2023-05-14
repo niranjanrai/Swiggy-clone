@@ -2,16 +2,32 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 const el = document.getElementById("root");
+{
+  /**
+       * Header
+          - Logo
+          - NavItems (Right Side)
+          - Cart
+       * Body
+       *  -SearchBar
+       *  -RestuarantList
+       *      - RestuarantCard
+       *          - Image
+       *          - Name
+       *          - Rating
+       *          - Cusiness
+       * Footer
+           - Links
+           - Copyright (c)
+       *
+       */
+}
 
 const Title = () => {
   return (
     <>
-      <a href="/">
-        <img
-          className="logo"
-          src="https://lh3.googleusercontent.com/p/AF1QipMf9w4RomHXrUkQKvrxtPdjp3SLadP05HDzXlH2=w1080-h608-p-no-v0"
-          alt="logo"
-        />
+      <a href="/" className="logo">
+        FV
       </a>
     </>
   );
@@ -52,25 +68,6 @@ const Footer = () => {
 const AppLayout = () => {
   return (
     <>
-      {/**
-       * Header
-          - Logo
-          - NavItems (Right Side)
-          - Cart
-       * Body
-       *  -SearchBar
-       *  -RestuarantList
-       *      - RestuarantCard
-       *          - Image
-       *          - Name
-       *          - Rating
-       *          - Cusiness
-       * Footer
-           - Links
-           - Copyright (c)
-       *
-       */}
-
       <Header />
       <Body />
       <Footer />
