@@ -2938,7 +2938,7 @@ const Title = ()=>{
             children: "FV"
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 26,
+            lineNumber: 28,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -2949,7 +2949,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 33,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2960,113 +2960,307 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 37,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "About"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 38,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Contact "
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 39,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "App.js",
-                            lineNumber: 40,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "App.js",
-                    lineNumber: 36,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 35,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 32,
+        lineNumber: 34,
         columnNumber: 10
     }, undefined);
 };
 _c1 = Header;
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-            children: "Body"
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 47,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false);
+const restuarantCard = [
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "308385",
+            name: "0612 ROAD CHEF ( Open Air )",
+            uuid: "3403edad-b00d-4c44-8d58-106b1a724ded",
+            city: "79",
+            area: "Kidwaipuri",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "a6kxfsntpbcygshv5sgp",
+            cuisines: [
+                "Indian",
+                "Chinese",
+                "South Indian",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 42,
+            minDeliveryTime: 42,
+            maxDeliveryTime: 42,
+            slaString: "42 MINS",
+            lastMileTravel: 4.300000190734863,
+            slugs: {
+                restaurant: "0612-road-chef-srikrishnapuri-srikrishnapuri",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "Boring Road Behind Karlo showroom",
+            locality: "Boring Canal Road",
+            parentId: 22680,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2600,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2600,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2600",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6786171~p=1~eid=00000188-1f3c-a492-529c-9ebb00a9013c",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.3 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "308385",
+                deliveryTime: 42,
+                minDeliveryTime: 42,
+                maxDeliveryTime: 42,
+                lastMileTravel: 4.300000190734863,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.9",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    }
+];
+const RestuarantCard = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/56c9ab92bd79745fd152a30fa2525426",
+                alt: "chicken"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 149,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "KFC"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 150,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: " chicken, American "
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 151,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: " 4.2 stars "
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 152,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 148,
+        columnNumber: 10
+    }, undefined);
 };
-_c2 = Body;
+_c2 = RestuarantCard;
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 157,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 158,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 159,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 160,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 161,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 162,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 163,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 156,
+        columnNumber: 10
+    }, undefined);
+};
+_c3 = Body;
 const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
             children: " Footer "
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 52,
+            lineNumber: 168,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
 };
-_c3 = Footer;
+_c4 = Footer;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 57,
+                lineNumber: 173,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 58,
+                lineNumber: 174,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 59,
+                lineNumber: 175,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_c4 = AppLayout;
+_c5 = AppLayout;
 (0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 62,
+    lineNumber: 178,
     columnNumber: 23
-}, undefined));
-var _c, _c1, _c2, _c3, _c4;
+}, undefined)); /**
+ *
+ *
+ *
+ */ 
+var _c, _c1, _c2, _c3, _c4, _c5;
 $RefreshReg$(_c, "Title");
 $RefreshReg$(_c1, "Header");
-$RefreshReg$(_c2, "Body");
-$RefreshReg$(_c3, "Footer");
-$RefreshReg$(_c4, "AppLayout");
+$RefreshReg$(_c2, "RestuarantCard");
+$RefreshReg$(_c3, "Body");
+$RefreshReg$(_c4, "Footer");
+$RefreshReg$(_c5, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj","./assets/logo.png":"kRPTR"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react/jsx-dev-runtime":"iTorj"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("5b23e579cc35501d");
 
@@ -27414,43 +27608,6 @@ module.exports = require("2833531592a3834c");
     exports.jsxDEV = jsxDEV$1;
 })();
 
-},{"c815d89dce550b35":"21dqq"}],"kRPTR":[function(require,module,exports) {
-module.exports = require("b581dc2cf4f9af0b").getBundleURL("lly8x") + "logo.f0c67fd0.png" + "?" + Date.now();
-
-},{"b581dc2cf4f9af0b":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequireae59")
+},{"c815d89dce550b35":"21dqq"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequireae59")
 
 //# sourceMappingURL=index.7826abd7.js.map

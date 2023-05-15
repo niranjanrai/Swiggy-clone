@@ -8,6 +8,14 @@ body {
   font-family: sans-serif;
 }
 
+.body {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -37,4 +45,14 @@ header {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
 }
