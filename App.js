@@ -975,19 +975,21 @@ const RestuarantList = [
   },
 ];
 
-const RestuarantCard = () => {
-  const RandomNum = Math.floor(Math.random * 8);
+const RestuarantCard = ({ restuarant }) => {
+  console.log(restuarant);
+
+  const { name, cuisines, cloudnaryImageId, avgRating, sla } = restuarant.data;
 
   return (
     <div className="card">
       <img
-        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${RestuarantList[2].data.cloudinaryImageId} `}
+        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${restuarant.data.cloudinaryImageId} `}
         alt="chicken"
       ></img>
-      <h2>{RestuarantList[0]?.data?.name}</h2>
-      <h3> {RestuarantList[0]?.data?.cuisines?.join(",")} </h3>
-      <h4> {RestuarantList[0]?.data?.avgRating} stars </h4>
-      <h5> {RestuarantList[0]?.data?.sla.deliveryTime} Minutes </h5>
+      <h5>{name} </h5>
+      <h6> {cuisines?.join(",")} </h6>
+      <h6> {avgRating} stars </h6>
+      <p> {sla.deliveryTime} Minutes </p>
     </div>
   );
 };
@@ -995,13 +997,12 @@ const RestuarantCard = () => {
 const Body = () => {
   return (
     <div className="body">
-      <RestuarantCard />
-      <RestuarantCard />
-      <RestuarantCard />
-      <RestuarantCard />
-      <RestuarantCard />
-      <RestuarantCard />
-      <RestuarantCard />
+      <RestuarantCard restuarant={RestuarantList[0]} />
+      <RestuarantCard restuarant={RestuarantList[1]} />
+      <RestuarantCard restuarant={RestuarantList[2]} />
+      <RestuarantCard restuarant={RestuarantList[3]} />
+      <RestuarantCard restuarant={RestuarantList[4]} />
+      <RestuarantCard restuarant={RestuarantList[5]} />
     </div>
   );
 };
