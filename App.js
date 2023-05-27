@@ -975,21 +975,23 @@ const RestuarantList = [
   },
 ];
 
-const RestuarantCard = ({ restuarant }) => {
-  console.log(restuarant);
-
-  const { name, cuisines, cloudnaryImageId, avgRating, sla } = restuarant.data;
-
+const RestuarantCard = ({
+  name,
+  cuisines,
+  cloudinaryImageId,
+  avgRating,
+  sla,
+}) => {
   return (
     <div className="card">
       <img
-        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${restuarant.data.cloudinaryImageId} `}
+        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `}
         alt="chicken"
       ></img>
       <h5>{name} </h5>
       <h6> {cuisines?.join(",")} </h6>
       <h6> {avgRating} stars </h6>
-      <p> {sla.deliveryTime} Minutes </p>
+      <p> {sla?.deliveryTime} Minutes </p>
     </div>
   );
 };
@@ -997,12 +999,22 @@ const RestuarantCard = ({ restuarant }) => {
 const Body = () => {
   return (
     <div className="body">
-      <RestuarantCard restuarant={RestuarantList[0]} />
-      <RestuarantCard restuarant={RestuarantList[1]} />
-      <RestuarantCard restuarant={RestuarantList[2]} />
-      <RestuarantCard restuarant={RestuarantList[3]} />
-      <RestuarantCard restuarant={RestuarantList[4]} />
-      <RestuarantCard restuarant={RestuarantList[5]} />
+      <RestuarantCard {...RestuarantList[0].data} />
+      <RestuarantCard {...RestuarantList[1].data} />
+      <RestuarantCard {...RestuarantList[2].data} />
+      <RestuarantCard {...RestuarantList[3].data} />
+      <RestuarantCard {...RestuarantList[4].data} />
+      <RestuarantCard {...RestuarantList[5].data} />
+      <RestuarantCard {...RestuarantList[5].data} />
+      <RestuarantCard {...RestuarantList[3].data} />
+      <RestuarantCard {...RestuarantList[2].data} />
+      <RestuarantCard {...RestuarantList[1].data} />
+      <RestuarantCard {...RestuarantList[6].data} />
+      <RestuarantCard {...RestuarantList[5].data} />
+      <RestuarantCard {...RestuarantList[4].data} />
+      <RestuarantCard {...RestuarantList[3].data} />
+      <RestuarantCard {...RestuarantList[2].data} />
+      <RestuarantCard {...RestuarantList[1].data} />
     </div>
   );
 };
