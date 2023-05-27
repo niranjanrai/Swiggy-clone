@@ -4020,121 +4020,19 @@ _c2 = RestuarantCard;
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[0].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1002,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[1].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1003,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[2].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1004,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[3].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1005,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[4].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1006,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[5].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1007,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[5].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1008,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[3].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1009,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[2].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1010,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[1].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1011,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[6].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1012,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[5].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1013,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[4].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1014,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[3].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1015,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[2].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1016,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestuarantCard, {
-                ...RestuarantList[1].data
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 1017,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        children: RestuarantList.map((restuarant, i)=>{
+            return /*#__PURE__*/ (0, _react.createElement)(RestuarantCard, {
+                ...restuarant.data,
+                key: i,
+                __source: {
+                    fileName: "App.js",
+                    lineNumber: 1003,
+                    columnNumber: 16
+                },
+                __self: undefined
+            });
+        })
+    }, void 0, false, {
         fileName: "App.js",
         lineNumber: 1001,
         columnNumber: 5
@@ -4147,7 +4045,7 @@ const Footer = ()=>{
             children: " Footer "
         }, void 0, false, {
             fileName: "App.js",
-            lineNumber: 1025,
+            lineNumber: 1012,
             columnNumber: 7
         }, undefined)
     }, void 0, false);
@@ -4158,17 +4056,17 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 1032,
+                lineNumber: 1019,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 1033,
+                lineNumber: 1020,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 1034,
+                lineNumber: 1021,
                 columnNumber: 7
             }, undefined)
         ]
@@ -4177,7 +4075,7 @@ const AppLayout = ()=>{
 _c5 = AppLayout;
 (0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 1039,
+    lineNumber: 1026,
     columnNumber: 23
 }, undefined));
 var _c, _c1, _c2, _c3, _c4, _c5;

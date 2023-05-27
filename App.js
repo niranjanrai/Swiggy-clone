@@ -999,22 +999,9 @@ const RestuarantCard = ({
 const Body = () => {
   return (
     <div className="body">
-      <RestuarantCard {...RestuarantList[0].data} />
-      <RestuarantCard {...RestuarantList[1].data} />
-      <RestuarantCard {...RestuarantList[2].data} />
-      <RestuarantCard {...RestuarantList[3].data} />
-      <RestuarantCard {...RestuarantList[4].data} />
-      <RestuarantCard {...RestuarantList[5].data} />
-      <RestuarantCard {...RestuarantList[5].data} />
-      <RestuarantCard {...RestuarantList[3].data} />
-      <RestuarantCard {...RestuarantList[2].data} />
-      <RestuarantCard {...RestuarantList[1].data} />
-      <RestuarantCard {...RestuarantList[6].data} />
-      <RestuarantCard {...RestuarantList[5].data} />
-      <RestuarantCard {...RestuarantList[4].data} />
-      <RestuarantCard {...RestuarantList[3].data} />
-      <RestuarantCard {...RestuarantList[2].data} />
-      <RestuarantCard {...RestuarantList[1].data} />
+      {RestuarantList.map((restuarant, i) => {
+        return <RestuarantCard {...restuarant.data} key={i} />;
+      })}
     </div>
   );
 };
