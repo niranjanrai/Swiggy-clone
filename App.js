@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
 const el = document.getElementById("root");
 
 {
@@ -28,33 +29,6 @@ const el = document.getElementById("root");
        *  Config-Driven UI
        */
 }
-
-const Title = () => {
-  return (
-    <>
-      <a href="/" className="logo">
-        FV
-      </a>
-    </>
-  );
-};
-
-const Header = () => {
-  return (
-    <header>
-      <Title />
-
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact </li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </header>
-  );
-};
 
 const RestuarantList = [
   {
@@ -988,6 +962,7 @@ const RestuarantCard = ({
         src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `}
         alt="chicken"
       ></img>
+
       <h5>{name} </h5>
       <h6> {cuisines?.join(",")} </h6>
       <h6> {avgRating} stars </h6>
@@ -1000,7 +975,7 @@ const Body = () => {
   return (
     <div className="body">
       {RestuarantList.map((restuarant, i) => {
-        return <RestuarantCard {...restuarant.data} key={i} />;
+        return <RestuarantCard {...restuarant.data} key={restuarant.data.id} />;
       })}
     </div>
   );
