@@ -7,28 +7,7 @@ import Footer from "./components/Footer";
 import { RestuarantList } from "./Constant";
 const el = document.getElementById("root");
 
-{
-  /**
-       * Header
-          - Logo
-          - NavItems (Right Side)
-          - Cart
-       * Body
-       *  -SearchBar
-       *  -RestuarantList
-       *      - RestuarantCard (many cards)
-       *          - Image
-       *          - Name
-       *          - Rating
-       *          - Cusiness
-       * Footer
-       
-           - Links
-           - Copyright (c)
 
-       *  Config-Driven UI
-       */
-}
 
 const AppLayout = () => {
   return (
