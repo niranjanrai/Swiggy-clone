@@ -20,8 +20,10 @@ body {
 header {
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 20px 0;
+  padding: 5px;
   display: flex;
+  box-shadow: 2px 2px 4px #0003;
 }
 
 .nav-items > ul {

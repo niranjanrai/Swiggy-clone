@@ -7,8 +7,6 @@ import Footer from "./components/Footer";
 import { RestuarantList } from "./Constant";
 const el = document.getElementById("root");
 
-
-
 const AppLayout = () => {
   return (
     <>
