@@ -1,3 +1,5 @@
+import { IMG_CDN_URL } from "../Constant";
+
 const RestuarantCard = ({
   name,
   cuisines,
@@ -7,10 +9,7 @@ const RestuarantCard = ({
 }) => {
   return (
     <div className="card">
-      <img
-        src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `}
-        alt="chicken"
-      ></img>
+      <img src={`${IMG_CDN_URL}${cloudinaryImageId}`} alt="chicken"></img>
       <h5>{name}</h5>
       <h6> {cuisines.join(", ")} </h6>
       <h6> {avgRating} stars </h6>

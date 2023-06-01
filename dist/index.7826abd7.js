@@ -2938,28 +2938,22 @@ var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _constant = require("./Constant");
 const el = document.getElementById("root");
-const style = {
-    backgroundColor: "red",
-    padding: "10px"
-};
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {
-                style: style
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 41,
+                lineNumber: 36,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 42,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 43,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined)
         ]
@@ -2968,7 +2962,7 @@ const AppLayout = ()=>{
 _c = AppLayout;
 (0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 48,
+    lineNumber: 43,
     columnNumber: 23
 }, undefined));
 var _c;
@@ -27433,6 +27427,171 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _restuarantCard = require("./RestuarantCard");
 var _restuarantCardDefault = parcelHelpers.interopDefault(_restuarantCard);
+var _constant = require("../Constant");
+var _s = $RefreshSig$();
+function filterData(searchText, restuarants) {
+    //
+    return restuarants.filter((restuarant)=>restuarant.data.name.includes(searchText));
+}
+const Body = ()=>{
+    _s();
+    const [searchText, setSeachText] = (0, _react.useState)("");
+    const [restuarants, setRestuarants] = (0, _react.useState)((0, _constant.RestuarantList));
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "seach-input",
+                        placeholder: "Search",
+                        value: searchText,
+                        onChange: (e)=>setSeachText(e.target.value)
+                    }, void 0, false, {
+                        fileName: "components/Body.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: ()=>{
+                            // need to filter data
+                            const data = filterData(searchText, restuarants);
+                            // update the state - restuarant
+                            setRestuarants(data);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "components/Body.jsx",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "components/Body.jsx",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "body",
+                children: restuarants.map((restuarant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _restuarantCardDefault.default), {
+                        ...restuarant.data,
+                        key: restuarant.data.id,
+                        __source: {
+                            fileName: "components/Body.jsx",
+                            lineNumber: 42,
+                            columnNumber: 13
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "components/Body.jsx",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "e+FmySba7BrHgT/bELMeDts5tFI=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$2887.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestuarantCard":"gtpNU","../Constant":"GULyL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gtpNU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$21c0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$21c0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constant = require("../Constant");
+const RestuarantCard = ({ name , cuisines , cloudinaryImageId , avgRating , sla  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: `${(0, _constant.IMG_CDN_URL)}${cloudinaryImageId}`,
+                alt: "chicken"
+            }, void 0, false, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: name
+            }, void 0, false, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: [
+                    " ",
+                    cuisines.join(", "),
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: [
+                    " ",
+                    avgRating,
+                    " stars "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    " ",
+                    sla?.deliveryTime,
+                    " Minutes "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/RestuarantCard.jsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestuarantCard;
+exports.default = RestuarantCard;
+var _c;
+$RefreshReg$(_c, "RestuarantCard");
+
+  $parcel$ReactRefreshHelpers$21c0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../Constant":"GULyL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"GULyL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "RestuarantList", ()=>RestuarantList);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 const RestuarantList = [
     {
         type: "restaurant",
@@ -28384,117 +28543,8 @@ const RestuarantList = [
         subtype: "basic"
     }
 ];
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: RestuarantList.map((restuarant)=>{
-            return /*#__PURE__*/ (0, _react.createElement)((0, _restuarantCardDefault.default), {
-                ...restuarant.data,
-                key: restuarant.data.id,
-                __source: {
-                    fileName: "components/Body.jsx",
-                    lineNumber: 926,
-                    columnNumber: 16
-                },
-                __self: undefined
-            });
-        })
-    }, void 0, false, {
-        fileName: "components/Body.jsx",
-        lineNumber: 924,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
 
-  $parcel$ReactRefreshHelpers$2887.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestuarantCard":"gtpNU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gtpNU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$21c0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$21c0.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const RestuarantCard = ({ name , cuisines , cloudinaryImageId , avgRating , sla  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `,
-                alt: "chicken"
-            }, void 0, false, {
-                fileName: "components/RestuarantCard.jsx",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                children: name
-            }, void 0, false, {
-                fileName: "components/RestuarantCard.jsx",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: [
-                    " ",
-                    cuisines.join(", "),
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "components/RestuarantCard.jsx",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: [
-                    " ",
-                    avgRating,
-                    " stars "
-                ]
-            }, void 0, true, {
-                fileName: "components/RestuarantCard.jsx",
-                lineNumber: 16,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: [
-                    " ",
-                    sla?.deliveryTime,
-                    " Minutes "
-                ]
-            }, void 0, true, {
-                fileName: "components/RestuarantCard.jsx",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "components/RestuarantCard.jsx",
-        lineNumber: 9,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestuarantCard;
-exports.default = RestuarantCard;
-var _c;
-$RefreshReg$(_c, "RestuarantCard");
-
-  $parcel$ReactRefreshHelpers$21c0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6QIYt":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6QIYt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$fe51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28525,9 +28575,6 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"GULyL":[function(require,module,exports) {
-const IMG_CDN_URL = "";
-
-},{}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire275d")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire275d")
 
 //# sourceMappingURL=index.7826abd7.js.map

@@ -30,12 +30,10 @@ const el = document.getElementById("root");
        */
 }
 
-const style = 
-
 const AppLayout = () => {
   return (
     <>
-      <Header  />
+      <Header />
       <Body />
       <Footer />
     </>

@@ -50,7 +50,7 @@ header {
 
 .card {
   width: 200px;
-  border: 1px solid black;
+
   padding: 10px;
 }
 
@@ -63,4 +63,25 @@ header {
 
 .card img:hover {
   transform: scale(1.05);
+}
+
+.search-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-container > input,
+button {
+  padding: 10px;
+  border: 1px solid #7777;
+  border-radius: 10px;
+}
+
+.search-container button {
+  min-width: 100px;
+  border-radius: 10px;
+  font-weight: 600;
 }
