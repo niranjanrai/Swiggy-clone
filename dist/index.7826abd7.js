@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("fbca5c939c771dc8");
-var ErrorOverlay = require("b9a93a0ad06794b8");
+var Refresh = require("767c5b7dd0ae0949");
+var ErrorOverlay = require("a4e43e8bff8ffeae");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,11 +163,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"fbca5c939c771dc8":"786KC","b9a93a0ad06794b8":"1dldy"}],"786KC":[function(require,module,exports) {
+},{"767c5b7dd0ae0949":"786KC","a4e43e8bff8ffeae":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
-module.exports = require("25c773fdd578f496");
+module.exports = require("ec67306278ef6483");
 
-},{"25c773fdd578f496":"hdge7"}],"hdge7":[function(require,module,exports) {
+},{"ec67306278ef6483":"hdge7"}],"hdge7":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -628,7 +628,7 @@ module.exports = require("25c773fdd578f496");
 })();
 
 },{}],"1dldy":[function(require,module,exports) {
-var process = require("f853984b29aea2ee");
+var process = require("d80a649333ffccfa");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2358,7 +2358,7 @@ var process = require("f853984b29aea2ee");
     ]);
 });
 
-},{"f853984b29aea2ee":"d5jf4"}],"d5jf4":[function(require,module,exports) {
+},{"d80a649333ffccfa":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2932,1098 +2932,58 @@ var _client = require("react-dom/client");
 var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
+var _body = require("./components/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
+var _footer = require("./components/Footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _constant = require("./Constant");
 const el = document.getElementById("root");
-const RestuarantList = [
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "308385",
-            name: "0612 ROAD CHEF ( Open Air )",
-            uuid: "3403edad-b00d-4c44-8d58-106b1a724ded",
-            city: "79",
-            area: "Kidwaipuri",
-            totalRatingsString: "10000+ ratings",
-            cloudinaryImageId: "a6kxfsntpbcygshv5sgp",
-            cuisines: [
-                "Indian",
-                "Chinese",
-                "South Indian",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 42,
-            minDeliveryTime: 42,
-            maxDeliveryTime: 42,
-            slaString: "42 MINS",
-            lastMileTravel: 4.300000190734863,
-            slugs: {
-                restaurant: "0612-road-chef-srikrishnapuri-srikrishnapuri",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "Boring Road Behind Karlo showroom",
-            locality: "Boring Canal Road",
-            parentId: 22680,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2600,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2600,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2600",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6786171~p=1~eid=00000188-1f3c-a492-529c-9ebb00a9013c",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "4.3 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹199",
-                discountTag: "FLAT DEAL",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "308385",
-                deliveryTime: 42,
-                minDeliveryTime: 42,
-                maxDeliveryTime: 42,
-                lastMileTravel: 4.300000190734863,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "3.9",
-            totalRatings: 10000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "242395",
-            name: "Ram Babu Restaurant",
-            uuid: "d681e274-d851-4cd9-ba53-8cfe1810572d",
-            city: "79",
-            area: "Kankarbagh",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "mq1vlwbzjanzdeukja3d",
-            cuisines: [
-                "Chinese",
-                "North Indian",
-                "Biryani"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 27,
-            minDeliveryTime: 27,
-            maxDeliveryTime: 27,
-            slaString: "27 MINS",
-            lastMileTravel: 0.699999988079071,
-            slugs: {
-                restaurant: "ram-babu-restaurant-kankarbagh-kankarbagh",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "Chandmadi road,Kankarbagh,patna - 800020",
-            locality: "Chandmadi road",
-            parentId: 166239,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "0.6 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹199",
-                discountTag: "FLAT DEAL",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "242395",
-                deliveryTime: 27,
-                minDeliveryTime: 27,
-                maxDeliveryTime: 27,
-                lastMileTravel: 0.699999988079071,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.5",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "246443",
-            name: "HARILAL (Kankarbagh)",
-            uuid: "ad5ff1d4-5533-4cec-9ca0-3ec0a298dbbb",
-            city: "79",
-            area: "Kankarbagh",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "cb3elcisgcyajxfsom43",
-            cuisines: [
-                "Bakery",
-                "Sweets",
-                "Indian"
-            ],
-            tags: [],
-            costForTwo: 15000,
-            costForTwoString: "₹150 FOR TWO",
-            deliveryTime: 34,
-            minDeliveryTime: 34,
-            maxDeliveryTime: 34,
-            slaString: "34 MINS",
-            lastMileTravel: 2.0999999046325684,
-            slugs: {
-                restaurant: "harilal's-kankarbagh-kankarbagh",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "gayatri mandir road, kankarbagh colony",
-            locality: "Gayatri Mandir Road",
-            parentId: 22072,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "246443",
-                deliveryTime: 34,
-                minDeliveryTime: 34,
-                maxDeliveryTime: 34,
-                lastMileTravel: 2.0999999046325684,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.2",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "395480",
-            name: "Naushijaan",
-            uuid: "b377943e-bb24-4192-85e3-13455239f981",
-            city: "79",
-            area: "Sri Krishnapuri",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "gphadekyu4pdrmvsyamk",
-            cuisines: [
-                "Biryani",
-                "Kebabs",
-                "North Indian",
-                "Tandoor"
-            ],
-            tags: [],
-            costForTwo: 50000,
-            costForTwoString: "₹500 FOR TWO",
-            deliveryTime: 38,
-            minDeliveryTime: 38,
-            maxDeliveryTime: 38,
-            slaString: "38 MINS",
-            lastMileTravel: 4.400000095367432,
-            slugs: {
-                restaurant: "naushijaan-srikrishnapuri-srikrishnapuri",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "- ANURADHA SINGH AND NEHA VERMA, AT.- INDRA LOK, EAST BORING CANAL ROAD, P.O.- GPO, P.S.- KOTWALI, Patna Sadar, Patna",
-            locality: "Boring Canal Road",
-            parentId: 5558,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2600,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2600,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2600",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6789042~p=4~eid=00000188-1f3c-a492-529c-9ebc00a9044d",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "4.4 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "30% OFF",
-                subHeader: "UPTO ₹75",
-                discountTag: "",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "395480",
-                deliveryTime: 38,
-                minDeliveryTime: 38,
-                maxDeliveryTime: 38,
-                lastMileTravel: 4.400000095367432,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "3.8",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "98898",
-            name: "Kathi Junction",
-            uuid: "f5e85098-6dc2-40b5-86fd-25d37b4b757a",
-            city: "79",
-            area: "Kankarbagh",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "yydpodxkblyvy5ocf5oo",
-            cuisines: [
-                "Indian",
-                "Chinese"
-            ],
-            tags: [],
-            costForTwo: 10000,
-            costForTwoString: "₹100 FOR TWO",
-            deliveryTime: 28,
-            minDeliveryTime: 28,
-            maxDeliveryTime: 28,
-            slaString: "28 MINS",
-            lastMileTravel: 1.600000023841858,
-            slugs: {
-                restaurant: "kathi-junction-kankar-kankarbagh",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "J-4, P.C.Colony, Behind Shankar chikitsalay, Kankarbagh, Patna -800020",
-            locality: "PC Colony",
-            parentId: 1935,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.6 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "98898",
-                deliveryTime: 28,
-                minDeliveryTime: 28,
-                maxDeliveryTime: 28,
-                lastMileTravel: 1.600000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "4.0",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "524423",
-            name: "La Pino'z Pizza",
-            uuid: "8a0504cf-c962-42d1-bf6a-30377c8b2a80",
-            city: "79",
-            area: "Kankarbagh",
-            totalRatingsString: "1000+ ratings",
-            cloudinaryImageId: "tnjwc1hltzaudqyilpzq",
-            cuisines: [
-                "Pizzas",
-                "Pastas",
-                "Italian",
-                "Desserts",
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 29,
-            minDeliveryTime: 29,
-            maxDeliveryTime: 29,
-            slaString: "29 MINS",
-            lastMileTravel: 2.299999952316284,
-            slugs: {
-                restaurant: "lainoz-pizza-kankarbagh-kankarbagh",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "S K 6, Sector-K, Malahi Pakadi Chowk, Kankarbagh, Patna Sadar, Patna, Bihar-800020",
-            locality: "Malahi Pakadi Chowk",
-            parentId: 4961,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "50% OFF",
-                subHeader: "UPTO ₹100",
-                discountTag: "",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "524423",
-                deliveryTime: 29,
-                minDeliveryTime: 29,
-                maxDeliveryTime: 29,
-                lastMileTravel: 2.299999952316284,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.7",
-            totalRatings: 1000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "98494",
-            name: "Dhaba & Kabab wala",
-            uuid: "4de6df7f-a838-4163-995b-bf436e09c28f",
-            city: "79",
-            area: "Bankman Colony",
-            totalRatingsString: "5000+ ratings",
-            cloudinaryImageId: "w8g1dmoovqggbwhjc2rt",
-            cuisines: [
-                "Indian",
-                "Chinese"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 34,
-            minDeliveryTime: 34,
-            maxDeliveryTime: 34,
-            slaString: "34 MINS",
-            lastMileTravel: 2.200000047683716,
-            slugs: {
-                restaurant: "dhaba-kabab-wala-kankarbagh-kankarbagh",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "A-244, PC colony, Near Shri Ram Hospital, Kankarbagh ,panta 20",
-            locality: "PC Colony",
-            parentId: 71819,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            ribbon: [
-                {
-                    type: "PROMOTED"
-                }
-            ],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "cid=6787232~p=7~eid=00000188-1f3c-a492-529c-9ebd00a90753",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "40% OFF",
-                subHeader: "UPTO ₹80",
-                discountTag: "",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "98494",
-                deliveryTime: 34,
-                minDeliveryTime: 34,
-                maxDeliveryTime: 34,
-                lastMileTravel: 2.200000047683716,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: true,
-            avgRating: "3.4",
-            totalRatings: 5000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "118491",
-            name: "Cake Palace",
-            uuid: "abfb5abd-5eab-40eb-8007-507e8d81e7fc",
-            city: "79",
-            area: "Golambar",
-            totalRatingsString: "10000+ ratings",
-            cloudinaryImageId: "pxaaijls6qfgpwzvyl72",
-            cuisines: [
-                "Desserts",
-                "Bakery"
-            ],
-            tags: [],
-            costForTwo: 25000,
-            costForTwoString: "₹250 FOR TWO",
-            deliveryTime: 43,
-            minDeliveryTime: 43,
-            maxDeliveryTime: 43,
-            slaString: "43 MINS",
-            lastMileTravel: 3.700000047683716,
-            slugs: {
-                restaurant: "cake-palace-golamber-golambar",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "janak kishore road, near sudha Booth, beside Hindi sahitya Sammelan, kadamkuan, patna",
-            locality: "Janak Kishore Road",
-            parentId: 11241,
-            unserviceable: false,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "3.7 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹199",
-                discountTag: "FLAT DEAL",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "118491",
-                deliveryTime: 43,
-                minDeliveryTime: 43,
-                maxDeliveryTime: 43,
-                lastMileTravel: 3.700000047683716,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.7",
-            totalRatings: 10000,
-            new: false
-        },
-        subtype: "basic"
-    },
-    {
-        type: "restaurant",
-        data: {
-            type: "F",
-            id: "88781",
-            name: "Sujata Family Restaurant",
-            uuid: "3ac5f62e-fca8-4c33-8fdc-4603804bb14a",
-            city: "79",
-            area: "Fraser Road",
-            totalRatingsString: "10000+ ratings",
-            cloudinaryImageId: "np13tsnfrxylkrk1ykm5",
-            cuisines: [
-                "Mughlai",
-                "Chinese",
-                "North Indian"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 35,
-            minDeliveryTime: 35,
-            maxDeliveryTime: 35,
-            slaString: "35 MINS",
-            lastMileTravel: 2.700000047683716,
-            slugs: {
-                restaurant: "sujata-family-restaurant-fraser-road-fraser-road",
-                city: "patna"
-            },
-            cityState: "79",
-            address: "Hotel Mayur, Fraser Road Area, Patna",
-            locality: "",
-            parentId: 196672,
-            unserviceable: false,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 2100,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 2100,
-                message: "",
-                title: "Delivery Charge",
-                amount: "2100",
-                icon: ""
-            },
-            availability: {
-                opened: true,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.7 kms",
-            hasSurge: false,
-            aggregatedDiscountInfoV3: {
-                header: "₹125 OFF",
-                subHeader: "ABOVE ₹199",
-                discountTag: "FLAT DEAL",
-                headerTypeV2: 0
-            },
-            sla: {
-                restaurantId: "88781",
-                deliveryTime: 35,
-                minDeliveryTime: 35,
-                maxDeliveryTime: 35,
-                lastMileTravel: 2.700000047683716,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.5",
-            totalRatings: 10000,
-            new: false
-        },
-        subtype: "basic"
-    }
-];
-const RestuarantCard = ({ name , cuisines , cloudinaryImageId , avgRating , sla  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `,
-                alt: "chicken"
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 961,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                children: [
-                    name,
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 966,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: [
-                    " ",
-                    cuisines?.join(","),
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 967,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: [
-                    " ",
-                    avgRating,
-                    " stars "
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 968,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: [
-                    " ",
-                    sla?.deliveryTime,
-                    " Minutes "
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 969,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 960,
-        columnNumber: 5
-    }, undefined);
+const style = {
+    backgroundColor: "red",
+    padding: "10px"
 };
-_c = RestuarantCard;
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: RestuarantList.map((restuarant, i)=>{
-            return /*#__PURE__*/ (0, _react.createElement)(RestuarantCard, {
-                ...restuarant.data,
-                key: restuarant.data.id,
-                __source: {
-                    fileName: "App.js",
-                    lineNumber: 978,
-                    columnNumber: 16
-                },
-                __self: undefined
-            });
-        })
-    }, void 0, false, {
-        fileName: "App.js",
-        lineNumber: 976,
-        columnNumber: 5
-    }, undefined);
-};
-_c1 = Body;
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-            children: " Footer "
-        }, void 0, false, {
-            fileName: "App.js",
-            lineNumber: 987,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false);
-};
-_c2 = Footer;
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {
+                style: style
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 994,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 995,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 996,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_c3 = AppLayout;
+_c = AppLayout;
 (0, _client.createRoot)(el).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 1001,
+    lineNumber: 48,
     columnNumber: 23
 }, undefined));
-var _c, _c1, _c2, _c3;
-$RefreshReg$(_c, "RestuarantCard");
-$RefreshReg$(_c1, "Body");
-$RefreshReg$(_c2, "Footer");
-$RefreshReg$(_c3, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","bootstrap/dist/css/bootstrap.min.css":"i5LP7","./components/Header":"6nmoh"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","bootstrap/dist/css/bootstrap.min.css":"i5LP7","./components/Header":"6nmoh","./components/Body":"8RO98","./components/Footer":"6QIYt","./Constant":"GULyL"}],"iTorj":[function(require,module,exports) {
 "use strict";
-module.exports = require("2833531592a3834c");
+module.exports = require("14d052a29216af51");
 
-},{"2833531592a3834c":"48uCM"}],"48uCM":[function(require,module,exports) {
+},{"14d052a29216af51":"48uCM"}],"48uCM":[function(require,module,exports) {
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -4035,7 +2995,7 @@ module.exports = require("2833531592a3834c");
  */ "use strict";
 (function() {
     "use strict";
-    var React = require("c815d89dce550b35");
+    var React = require("1cda147f8aae74a");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
@@ -4854,11 +3814,11 @@ module.exports = require("2833531592a3834c");
     exports.jsxDEV = jsxDEV$1;
 })();
 
-},{"c815d89dce550b35":"21dqq"}],"21dqq":[function(require,module,exports) {
+},{"1cda147f8aae74a":"21dqq"}],"21dqq":[function(require,module,exports) {
 "use strict";
-module.exports = require("5b23e579cc35501d");
+module.exports = require("65994c0a4a53f315");
 
-},{"5b23e579cc35501d":"6YvXz"}],"6YvXz":[function(require,module,exports) {
+},{"65994c0a4a53f315":"6YvXz"}],"6YvXz":[function(require,module,exports) {
 /**
  * @license React
  * react.development.js
@@ -6726,7 +5686,7 @@ module.exports = require("5b23e579cc35501d");
 
 },{}],"lOjBx":[function(require,module,exports) {
 "use strict";
-var m = require("b053c2db438af4e1");
+var m = require("57f7090d191db03b");
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 exports.createRoot = function(c, o) {
     i.usingClientEntryPoint = true;
@@ -6745,7 +5705,7 @@ exports.hydrateRoot = function(c, h, o) {
     }
 };
 
-},{"b053c2db438af4e1":"j6uA9"}],"j6uA9":[function(require,module,exports) {
+},{"57f7090d191db03b":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -6759,9 +5719,9 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("5e533cb88abe88b7");
+module.exports = require("f6a4e19d957f45ee");
 
-},{"5e533cb88abe88b7":"3iA9v"}],"3iA9v":[function(require,module,exports) {
+},{"f6a4e19d957f45ee":"3iA9v"}],"3iA9v":[function(require,module,exports) {
 /**
  * @license React
  * react-dom.development.js
@@ -6774,8 +5734,8 @@ module.exports = require("5e533cb88abe88b7");
 (function() {
     "use strict";
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("30a1cee0c6e7d73c");
-    var Scheduler = require("b5f95062a34eccde");
+    var React = require("f68b7d53f712cc9a");
+    var Scheduler = require("b499960883ef2b8b");
     var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     var suppressWarning = false;
     function setSuppressWarning(newSuppressWarning) {
@@ -27746,11 +26706,11 @@ module.exports = require("5e533cb88abe88b7");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"30a1cee0c6e7d73c":"21dqq","b5f95062a34eccde":"juvHo"}],"juvHo":[function(require,module,exports) {
+},{"f68b7d53f712cc9a":"21dqq","b499960883ef2b8b":"juvHo"}],"juvHo":[function(require,module,exports) {
 "use strict";
-module.exports = require("e5cc5b2565bb8a8c");
+module.exports = require("d26f82e25e705fe8");
 
-},{"e5cc5b2565bb8a8c":"RqdIf"}],"RqdIf":[function(require,module,exports) {
+},{"d26f82e25e705fe8":"RqdIf"}],"RqdIf":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -28236,7 +27196,7 @@ exports.export = function(dest, destName, get) {
 
 },{}],"km3Ru":[function(require,module,exports) {
 "use strict";
-var Refresh = require("1204b7fe353bfc64");
+var Refresh = require("fc3c9ec8f2557d3e");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -28367,7 +27327,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"1204b7fe353bfc64":"786KC"}],"i5LP7":[function() {},{}],"6nmoh":[function(require,module,exports) {
+},{"fc3c9ec8f2557d3e":"786KC"}],"i5LP7":[function() {},{}],"6nmoh":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6433 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28460,6 +27420,1114 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire275d")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8RO98":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2887 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2887.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _restuarantCard = require("./RestuarantCard");
+var _restuarantCardDefault = parcelHelpers.interopDefault(_restuarantCard);
+const RestuarantList = [
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "308385",
+            name: "0612 ROAD CHEF ( Open Air )",
+            uuid: "3403edad-b00d-4c44-8d58-106b1a724ded",
+            city: "79",
+            area: "Kidwaipuri",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "a6kxfsntpbcygshv5sgp",
+            cuisines: [
+                "Indian",
+                "Chinese",
+                "South Indian",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 42,
+            minDeliveryTime: 42,
+            maxDeliveryTime: 42,
+            slaString: "42 MINS",
+            lastMileTravel: 4.300000190734863,
+            slugs: {
+                restaurant: "0612-road-chef-srikrishnapuri-srikrishnapuri",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "Boring Road Behind Karlo showroom",
+            locality: "Boring Canal Road",
+            parentId: 22680,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2600,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2600,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2600",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6786171~p=1~eid=00000188-1f3c-a492-529c-9ebb00a9013c",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.3 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "308385",
+                deliveryTime: 42,
+                minDeliveryTime: 42,
+                maxDeliveryTime: 42,
+                lastMileTravel: 4.300000190734863,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.9",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "242395",
+            name: "Ram Babu Restaurant",
+            uuid: "d681e274-d851-4cd9-ba53-8cfe1810572d",
+            city: "79",
+            area: "Kankarbagh",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "mq1vlwbzjanzdeukja3d",
+            cuisines: [
+                "Chinese",
+                "North Indian",
+                "Biryani"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 27,
+            minDeliveryTime: 27,
+            maxDeliveryTime: 27,
+            slaString: "27 MINS",
+            lastMileTravel: 0.699999988079071,
+            slugs: {
+                restaurant: "ram-babu-restaurant-kankarbagh-kankarbagh",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "Chandmadi road,Kankarbagh,patna - 800020",
+            locality: "Chandmadi road",
+            parentId: 166239,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "0.6 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "242395",
+                deliveryTime: 27,
+                minDeliveryTime: 27,
+                maxDeliveryTime: 27,
+                lastMileTravel: 0.699999988079071,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.5",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "246443",
+            name: "HARILAL (Kankarbagh)",
+            uuid: "ad5ff1d4-5533-4cec-9ca0-3ec0a298dbbb",
+            city: "79",
+            area: "Kankarbagh",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "cb3elcisgcyajxfsom43",
+            cuisines: [
+                "Bakery",
+                "Sweets",
+                "Indian"
+            ],
+            tags: [],
+            costForTwo: 15000,
+            costForTwoString: "₹150 FOR TWO",
+            deliveryTime: 34,
+            minDeliveryTime: 34,
+            maxDeliveryTime: 34,
+            slaString: "34 MINS",
+            lastMileTravel: 2.0999999046325684,
+            slugs: {
+                restaurant: "harilal's-kankarbagh-kankarbagh",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "gayatri mandir road, kankarbagh colony",
+            locality: "Gayatri Mandir Road",
+            parentId: 22072,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "246443",
+                deliveryTime: 34,
+                minDeliveryTime: 34,
+                maxDeliveryTime: 34,
+                lastMileTravel: 2.0999999046325684,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.2",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "395480",
+            name: "Naushijaan",
+            uuid: "b377943e-bb24-4192-85e3-13455239f981",
+            city: "79",
+            area: "Sri Krishnapuri",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "gphadekyu4pdrmvsyamk",
+            cuisines: [
+                "Biryani",
+                "Kebabs",
+                "North Indian",
+                "Tandoor"
+            ],
+            tags: [],
+            costForTwo: 50000,
+            costForTwoString: "₹500 FOR TWO",
+            deliveryTime: 38,
+            minDeliveryTime: 38,
+            maxDeliveryTime: 38,
+            slaString: "38 MINS",
+            lastMileTravel: 4.400000095367432,
+            slugs: {
+                restaurant: "naushijaan-srikrishnapuri-srikrishnapuri",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "- ANURADHA SINGH AND NEHA VERMA, AT.- INDRA LOK, EAST BORING CANAL ROAD, P.O.- GPO, P.S.- KOTWALI, Patna Sadar, Patna",
+            locality: "Boring Canal Road",
+            parentId: 5558,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2600,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2600,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2600",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6789042~p=4~eid=00000188-1f3c-a492-529c-9ebc00a9044d",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "4.4 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "30% OFF",
+                subHeader: "UPTO ₹75",
+                discountTag: "",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "395480",
+                deliveryTime: 38,
+                minDeliveryTime: 38,
+                maxDeliveryTime: 38,
+                lastMileTravel: 4.400000095367432,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.8",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "98898",
+            name: "Kathi Junction",
+            uuid: "f5e85098-6dc2-40b5-86fd-25d37b4b757a",
+            city: "79",
+            area: "Kankarbagh",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "yydpodxkblyvy5ocf5oo",
+            cuisines: [
+                "Indian",
+                "Chinese"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 28,
+            minDeliveryTime: 28,
+            maxDeliveryTime: 28,
+            slaString: "28 MINS",
+            lastMileTravel: 1.600000023841858,
+            slugs: {
+                restaurant: "kathi-junction-kankar-kankarbagh",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "J-4, P.C.Colony, Behind Shankar chikitsalay, Kankarbagh, Patna -800020",
+            locality: "PC Colony",
+            parentId: 1935,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "98898",
+                deliveryTime: 28,
+                minDeliveryTime: 28,
+                maxDeliveryTime: 28,
+                lastMileTravel: 1.600000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "4.0",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "524423",
+            name: "La Pino'z Pizza",
+            uuid: "8a0504cf-c962-42d1-bf6a-30377c8b2a80",
+            city: "79",
+            area: "Kankarbagh",
+            totalRatingsString: "1000+ ratings",
+            cloudinaryImageId: "tnjwc1hltzaudqyilpzq",
+            cuisines: [
+                "Pizzas",
+                "Pastas",
+                "Italian",
+                "Desserts",
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 29,
+            minDeliveryTime: 29,
+            maxDeliveryTime: 29,
+            slaString: "29 MINS",
+            lastMileTravel: 2.299999952316284,
+            slugs: {
+                restaurant: "lainoz-pizza-kankarbagh-kankarbagh",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "S K 6, Sector-K, Malahi Pakadi Chowk, Kankarbagh, Patna Sadar, Patna, Bihar-800020",
+            locality: "Malahi Pakadi Chowk",
+            parentId: 4961,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "50% OFF",
+                subHeader: "UPTO ₹100",
+                discountTag: "",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "524423",
+                deliveryTime: 29,
+                minDeliveryTime: 29,
+                maxDeliveryTime: 29,
+                lastMileTravel: 2.299999952316284,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.7",
+            totalRatings: 1000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "98494",
+            name: "Dhaba & Kabab wala",
+            uuid: "4de6df7f-a838-4163-995b-bf436e09c28f",
+            city: "79",
+            area: "Bankman Colony",
+            totalRatingsString: "5000+ ratings",
+            cloudinaryImageId: "w8g1dmoovqggbwhjc2rt",
+            cuisines: [
+                "Indian",
+                "Chinese"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 34,
+            minDeliveryTime: 34,
+            maxDeliveryTime: 34,
+            slaString: "34 MINS",
+            lastMileTravel: 2.200000047683716,
+            slugs: {
+                restaurant: "dhaba-kabab-wala-kankarbagh-kankarbagh",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "A-244, PC colony, Near Shri Ram Hospital, Kankarbagh ,panta 20",
+            locality: "PC Colony",
+            parentId: 71819,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            ribbon: [
+                {
+                    type: "PROMOTED"
+                }
+            ],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "cid=6787232~p=7~eid=00000188-1f3c-a492-529c-9ebd00a90753",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "40% OFF",
+                subHeader: "UPTO ₹80",
+                discountTag: "",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "98494",
+                deliveryTime: 34,
+                minDeliveryTime: 34,
+                maxDeliveryTime: 34,
+                lastMileTravel: 2.200000047683716,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: true,
+            avgRating: "3.4",
+            totalRatings: 5000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "118491",
+            name: "Cake Palace",
+            uuid: "abfb5abd-5eab-40eb-8007-507e8d81e7fc",
+            city: "79",
+            area: "Golambar",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "pxaaijls6qfgpwzvyl72",
+            cuisines: [
+                "Desserts",
+                "Bakery"
+            ],
+            tags: [],
+            costForTwo: 25000,
+            costForTwoString: "₹250 FOR TWO",
+            deliveryTime: 43,
+            minDeliveryTime: 43,
+            maxDeliveryTime: 43,
+            slaString: "43 MINS",
+            lastMileTravel: 3.700000047683716,
+            slugs: {
+                restaurant: "cake-palace-golamber-golambar",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "janak kishore road, near sudha Booth, beside Hindi sahitya Sammelan, kadamkuan, patna",
+            locality: "Janak Kishore Road",
+            parentId: 11241,
+            unserviceable: false,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "3.7 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "118491",
+                deliveryTime: 43,
+                minDeliveryTime: 43,
+                maxDeliveryTime: 43,
+                lastMileTravel: 3.700000047683716,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.7",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    },
+    {
+        type: "restaurant",
+        data: {
+            type: "F",
+            id: "88781",
+            name: "Sujata Family Restaurant",
+            uuid: "3ac5f62e-fca8-4c33-8fdc-4603804bb14a",
+            city: "79",
+            area: "Fraser Road",
+            totalRatingsString: "10000+ ratings",
+            cloudinaryImageId: "np13tsnfrxylkrk1ykm5",
+            cuisines: [
+                "Mughlai",
+                "Chinese",
+                "North Indian"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 35,
+            minDeliveryTime: 35,
+            maxDeliveryTime: 35,
+            slaString: "35 MINS",
+            lastMileTravel: 2.700000047683716,
+            slugs: {
+                restaurant: "sujata-family-restaurant-fraser-road-fraser-road",
+                city: "patna"
+            },
+            cityState: "79",
+            address: "Hotel Mayur, Fraser Road Area, Patna",
+            locality: "",
+            parentId: 196672,
+            unserviceable: false,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 2100,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 2100,
+                message: "",
+                title: "Delivery Charge",
+                amount: "2100",
+                icon: ""
+            },
+            availability: {
+                opened: true,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.7 kms",
+            hasSurge: false,
+            aggregatedDiscountInfoV3: {
+                header: "₹125 OFF",
+                subHeader: "ABOVE ₹199",
+                discountTag: "FLAT DEAL",
+                headerTypeV2: 0
+            },
+            sla: {
+                restaurantId: "88781",
+                deliveryTime: 35,
+                minDeliveryTime: 35,
+                maxDeliveryTime: 35,
+                lastMileTravel: 2.700000047683716,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.5",
+            totalRatings: 10000,
+            new: false
+        },
+        subtype: "basic"
+    }
+];
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: RestuarantList.map((restuarant)=>{
+            return /*#__PURE__*/ (0, _react.createElement)((0, _restuarantCardDefault.default), {
+                ...restuarant.data,
+                key: restuarant.data.id,
+                __source: {
+                    fileName: "components/Body.jsx",
+                    lineNumber: 926,
+                    columnNumber: 16
+                },
+                __self: undefined
+            });
+        })
+    }, void 0, false, {
+        fileName: "components/Body.jsx",
+        lineNumber: 924,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$2887.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestuarantCard":"gtpNU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gtpNU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$21c0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$21c0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const RestuarantCard = ({ name , cuisines , cloudinaryImageId , avgRating , sla  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId} `,
+                alt: "chicken"
+            }, void 0, false, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: name
+            }, void 0, false, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: [
+                    " ",
+                    cuisines.join(", "),
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: [
+                    " ",
+                    avgRating,
+                    " stars "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: [
+                    " ",
+                    sla?.deliveryTime,
+                    " Minutes "
+                ]
+            }, void 0, true, {
+                fileName: "components/RestuarantCard.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/RestuarantCard.jsx",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestuarantCard;
+exports.default = RestuarantCard;
+var _c;
+$RefreshReg$(_c, "RestuarantCard");
+
+  $parcel$ReactRefreshHelpers$21c0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6QIYt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fe51 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fe51.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            children: " Footer "
+        }, void 0, false, {
+            fileName: "components/Footer.jsx",
+            lineNumber: 4,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$fe51.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"GULyL":[function(require,module,exports) {
+const IMG_CDN_URL = "";
+
+},{}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire275d")
 
 //# sourceMappingURL=index.7826abd7.js.map

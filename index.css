@@ -23,6 +23,7 @@ header {
   margin: 10px;
   align-items: center;
 }
+
 .nav-items > ul {
   display: flex;
   justify-content: center;
