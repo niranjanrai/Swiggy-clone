@@ -27430,13 +27430,22 @@ var _restuarantCardDefault = parcelHelpers.interopDefault(_restuarantCard);
 var _constant = require("../Constant");
 var _s = $RefreshSig$();
 function filterData(searchText, restuarants) {
-    //
+    // filtered data
     return restuarants.filter((restuarant)=>restuarant.data.name.includes(searchText));
 }
 const Body = ()=>{
     _s();
     const [searchText, setSeachText] = (0, _react.useState)("");
     const [restuarants, setRestuarants] = (0, _react.useState)((0, _constant.RestuarantList));
+    (0, _react.useEffect)(()=>{
+        // API Call
+        getRestuarants();
+    }, []);
+    async function getRestuarants() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+    // console.log(json);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27450,7 +27459,7 @@ const Body = ()=>{
                         onChange: (e)=>setSeachText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 19,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27464,13 +27473,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 27,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 18,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27481,7 +27490,7 @@ const Body = ()=>{
                         key: restuarant.data.id,
                         __source: {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 42,
+                            lineNumber: 55,
                             columnNumber: 13
                         },
                         __self: undefined
@@ -27489,13 +27498,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 39,
+                lineNumber: 52,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "e+FmySba7BrHgT/bELMeDts5tFI=");
+_s(Body, "0ADhQH+R5SkoA3EvxWlu4lvMdWc=");
 _c = Body;
 exports.default = Body;
 var _c;
