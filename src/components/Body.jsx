@@ -1,18 +1,21 @@
 import RestuarantCard from "./RestuarantCard";
+import { Button } from "react-bootstrap";
 import { RestuarantList } from "../Constant";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 function filterData(searchText, restuarants) {
   // filtered data
   return restuarants.filter((restuarant) =>
-    restuarant.data.name.includes(searchText)
+    restuarant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
   );
 }
 
 const Body = () => {
+  const [allRestuarant, setAllRestuarant] = useState([]);
   const [searchText, setSeachText] = useState("");
-  const [restuarants, setRestuarants] = useState(RestuarantList);
-
+  const [filteredRestuarants, setFilteredRestuarants] = useState([]);
+  console.log("render");
   useEffect(() => {
     // API Call
     getRestuarants();
@@ -21,13 +24,26 @@ const Body = () => {
   // get Restuarant
   async function getRestuarants() {
     const res = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940499&lng=85.1376051&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.022505&lng=72.5713621&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await res.json();
-    setRestuarants(json?.data?.cards[2]?.data?.data?.cards);
+    console.log(json);
+    setAllRestuarant(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestuarants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
-  return (
+  // not render component (early return)
+
+  if (!allRestuarant) return null;
+
+  // show when no restuarant found in search
+  if (filteredRestuarants?.length === 0)
+    return <h1> No Restuarant match your search</h1>;
+
+  // conditional rendering
+  return allRestuarant.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-container">
         <input
@@ -42,16 +58,16 @@ const Body = () => {
           className="search-btn"
           onClick={() => {
             // need to filter data
-            const data = filterData(searchText, restuarants);
+            const data = filterData(searchText, allRestuarant);
             // update the state - restuarant
-            setRestuarants(data);
+            setFilteredRestuarants(data);
           }}
         >
           Search
         </button>
       </div>
       <div className="body">
-        {restuarants.map((restuarant) => {
+        {filteredRestuarants.map((restuarant) => {
           return (
             <RestuarantCard {...restuarant.data} key={restuarant.data.id} />
           );

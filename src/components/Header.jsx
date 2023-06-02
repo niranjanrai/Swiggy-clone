@@ -1,14 +1,21 @@
+import { Button } from "react-bootstrap";
+import { useState } from "react";
+const loggedInUser = () => {
+  return true;
+};
+
 const Title = () => {
   return (
     <>
       <a href="/" className="logo">
-        FV
+        FoodVilla
       </a>
     </>
   );
 };
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <header>
       <Title />
@@ -21,6 +28,26 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+
+      {isLoggedIn ? (
+        <Button
+          className="btn"
+          variant="danger"
+          size="lg"
+          onClick={() => setIsLoggedIn(false)}
+        >
+          Logout
+        </Button>
+      ) : (
+        <Button
+          className="btn"
+          variant="success"
+          size="lg"
+          onClick={() => setIsLoggedIn(true)}
+        >
+          Login
+        </Button>
+      )}
     </header>
   );
 };
