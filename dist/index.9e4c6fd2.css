@@ -84,6 +84,11 @@ header {
   min-width: 100px;
   border-radius: 10px;
   font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+
+.search-container button:hover {
+  background-color: #f3d7c5;
 }
 
 :root {

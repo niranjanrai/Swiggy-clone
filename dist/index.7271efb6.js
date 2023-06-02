@@ -27441,10 +27441,11 @@ const Body = ()=>{
         // API Call
         getRestuarants();
     }, []);
+    // get Restuarant
     async function getRestuarants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-    // console.log(json);
+        const res = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940499&lng=85.1376051&page_type=DESKTOP_WEB_LISTING");
+        const json = await res.json();
+        setRestuarants(json?.data?.cards[2]?.data?.data?.cards);
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27459,7 +27460,7 @@ const Body = ()=>{
                         onChange: (e)=>setSeachText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27473,13 +27474,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 40,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27490,7 +27491,7 @@ const Body = ()=>{
                         key: restuarant.data.id,
                         __source: {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 55,
+                            lineNumber: 56,
                             columnNumber: 13
                         },
                         __self: undefined
@@ -27498,7 +27499,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 52,
+                lineNumber: 53,
                 columnNumber: 7
             }, undefined)
         ]

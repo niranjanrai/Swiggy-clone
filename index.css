@@ -86,4 +86,8 @@ button {
   min-width: 100px;
   border-radius: 10px;
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.search-container button:hover {
+  background-color: rgb(243, 215, 197);
 }

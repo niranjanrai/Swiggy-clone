@@ -18,12 +18,13 @@ const Body = () => {
     getRestuarants();
   }, []);
 
+  // get Restuarant
   async function getRestuarants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING"
+    const res = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940499&lng=85.1376051&page_type=DESKTOP_WEB_LISTING"
     );
-    const json = await data.json();
-    // console.log(json);
+    const json = await res.json();
+    setRestuarants(json?.data?.cards[2]?.data?.data?.cards);
   }
 
   return (
