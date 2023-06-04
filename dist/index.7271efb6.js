@@ -40758,6 +40758,8 @@ var _reactBootstrap = require("react-bootstrap");
 var _constant = require("../Constant");
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _cardExample = require("./CardExample");
+var _cardExampleDefault = parcelHelpers.interopDefault(_cardExample);
 var _s = $RefreshSig$();
 function filterData(searchText, restuarants) {
     // filtered data
@@ -40768,7 +40770,6 @@ const Body = ()=>{
     const [allRestuarant, setAllRestuarant] = (0, _react.useState)([]);
     const [searchText, setSeachText] = (0, _react.useState)("");
     const [filteredRestuarants, setFilteredRestuarants] = (0, _react.useState)([]);
-    console.log("render");
     (0, _react.useEffect)(()=>{
         // API Call
         getRestuarants();
@@ -40788,13 +40789,13 @@ const Body = ()=>{
         children: " No Restuarant match your search"
     }, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 41,
+        lineNumber: 43,
         columnNumber: 12
     }, undefined);
     // conditional rendering
-    return allRestuarant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+    return allRestuarant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardExampleDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.jsx",
-        lineNumber: 45,
+        lineNumber: 47,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -40809,7 +40810,7 @@ const Body = ()=>{
                         onChange: (e)=>setSeachText(e.target.value)
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 49,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -40823,13 +40824,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.jsx",
-                        lineNumber: 57,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 48,
+                lineNumber: 50,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -40840,7 +40841,7 @@ const Body = ()=>{
                         key: restuarant.data.id,
                         __source: {
                             fileName: "src/components/Body.jsx",
-                            lineNumber: 72,
+                            lineNumber: 74,
                             columnNumber: 13
                         },
                         __self: undefined
@@ -40848,7 +40849,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.jsx",
-                lineNumber: 69,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined)
         ]
@@ -40865,7 +40866,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestuarantCard":"enMm5","../Constant":"HUUYw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Shimmer":"imnNo","react-bootstrap":"3AD9A"}],"enMm5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestuarantCard":"enMm5","../Constant":"HUUYw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap":"3AD9A","./Shimmer":"imnNo","./CardExample":"5KKFs"}],"enMm5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$19d5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41958,7 +41959,140 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2OVeV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5KKFs":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$346b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$346b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _card = require("react-bootstrap/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _placeholder = require("react-bootstrap/Placeholder");
+var _placeholderDefault = parcelHelpers.interopDefault(_placeholder);
+function CardExample() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+            style: {
+                width: "12rem"
+            },
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Img, {
+                    variant: "top",
+                    src: "holder.js/100px180"
+                }, void 0, false, {
+                    fileName: "src/components/CardExample.jsx",
+                    lineNumber: 9,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default).Body, {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                            as: (0, _cardDefault.default).Title,
+                            animation: "glow",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                xs: 6
+                            }, void 0, false, {
+                                fileName: "src/components/CardExample.jsx",
+                                lineNumber: 12,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/components/CardExample.jsx",
+                            lineNumber: 11,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                            as: (0, _cardDefault.default).Text,
+                            animation: "glow",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                    xs: 7
+                                }, void 0, false, {
+                                    fileName: "src/components/CardExample.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 13
+                                }, this),
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                    xs: 4
+                                }, void 0, false, {
+                                    fileName: "src/components/CardExample.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 36
+                                }, this),
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                    xs: 4
+                                }, void 0, false, {
+                                    fileName: "src/components/CardExample.jsx",
+                                    lineNumber: 15,
+                                    columnNumber: 59
+                                }, this),
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                    xs: 6
+                                }, void 0, false, {
+                                    fileName: "src/components/CardExample.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, this),
+                                " ",
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default), {
+                                    xs: 8
+                                }, void 0, false, {
+                                    fileName: "src/components/CardExample.jsx",
+                                    lineNumber: 16,
+                                    columnNumber: 36
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/CardExample.jsx",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _placeholderDefault.default).Button, {
+                            variant: "primary",
+                            xs: 6
+                        }, void 0, false, {
+                            fileName: "src/components/CardExample.jsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/CardExample.jsx",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/CardExample.jsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "src/components/CardExample.jsx",
+        lineNumber: 7,
+        columnNumber: 5
+    }, this);
+}
+_c = CardExample;
+exports.default = CardExample;
+var _c;
+$RefreshReg$(_c, "CardExample");
+
+  $parcel$ReactRefreshHelpers$346b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Button":"aPzUt","react-bootstrap/Card":"lAynp","react-bootstrap/Placeholder":"fw5xV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2OVeV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$66c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

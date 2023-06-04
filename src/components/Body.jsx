@@ -3,6 +3,8 @@ import { Button } from "react-bootstrap";
 import { RestuarantList } from "../Constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import CardExample from "./CardExample";
+import { App } from "./CardExample";
 
 function filterData(searchText, restuarants) {
   // filtered data
@@ -15,7 +17,7 @@ const Body = () => {
   const [allRestuarant, setAllRestuarant] = useState([]);
   const [searchText, setSeachText] = useState("");
   const [filteredRestuarants, setFilteredRestuarants] = useState([]);
-  console.log("render");
+
   useEffect(() => {
     // API Call
     getRestuarants();
@@ -42,7 +44,7 @@ const Body = () => {
 
   // conditional rendering
   return allRestuarant.length === 0 ? (
-    <Shimmer />
+    <CardExample />
   ) : (
     <>
       <div className="search-container">
