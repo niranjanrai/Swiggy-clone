@@ -29,7 +29,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.022505&lng=72.5713621&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await res.json();
-    console.log(json);
+
     setAllRestuarant(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestuarants(json?.data?.cards[2]?.data?.data?.cards);
   }
@@ -39,12 +39,14 @@ const Body = () => {
   if (!allRestuarant) return null;
 
   // show when no restuarant found in search
-  if (filteredRestuarants?.length === 0)
-    return <h1> No Restuarant match your search</h1>;
+  // if (filteredRestuarants?.length === 0)
+  //   return <h1> No Restuarant match your search</h1>;
 
   // conditional rendering
   return allRestuarant.length === 0 ? (
-    <CardExample />
+    <div className="shimmer-con">
+      <Shimmer />
+    </div>
   ) : (
     <>
       <div className="search-container">

@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
 body {
   margin: auto;
   font-family: sans-serif;
@@ -32,16 +37,17 @@ header {
   display: flex;
 }
 
-.nav-items > ul > li {
+.nav-items > ul > a {
   cursor: pointer;
   padding: 10px;
   font-weight: 600;
+  text-decoration: none;
   list-style: none;
   transition: all .5s ease-in-out;
 }
 
-.nav-items > ul > li:hover {
-  color: #463007;
+.nav-items > ul > a:hover {
+  color: #65a9f7;
 }
 
 .logo {
@@ -116,6 +122,39 @@ header {
 
 .btn {
   width: 100px;
+}
+
+.shimmer-con {
+  max-width: 1280px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.error-con {
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.error-con > svg {
+  color: #d30e0e;
+  font-size: 5rem;
+}
+
+.error-con > h1 {
+  color: #d30e0e;
+  font-size: 3rem;
+}
+
+.error-con > p {
+  color: #d30e0e;
+  font-size: 30px;
 }
 
 :root {
