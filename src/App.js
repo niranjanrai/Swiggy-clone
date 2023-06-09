@@ -6,7 +6,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import { RestuarantList } from "./Constant";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About.jsx";
 import Error from "./components/Error.jsx";
 import Contact from "./components/Contact";
@@ -16,9 +16,7 @@ const AppLayout = () => {
   return (
     <>
       <Header />
-      <About />
-      <Body />
-      <Contact />
+      <Outlet />
       <Footer />
     </>
   );
@@ -30,6 +28,10 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
       {
         path: "/about",
         element: <About />,
