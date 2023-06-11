@@ -1,10 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
 const RestuarantMenu = () => {
   const { id } = useParams();
+  const [restuarant, setRestuarant] = useState([]);
 
   useEffect(() => {
     getRestuarantDetails();
@@ -14,6 +15,7 @@ const RestuarantMenu = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.022505&lng=72.5713621&restaurantId=52630&submitAction=ENTER"
     );
+
     const json = await data.json();
     console.log(json);
   }
