@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import CardExample from "./CardExample";
 import { App } from "./CardExample";
+import RestuarantMenu from "./RestuarantMenu";
 
 function filterData(searchText, restuarants) {
   // filtered data
@@ -69,6 +70,7 @@ const Body = () => {
         >
           Search
         </button>
+        <RestuarantMenu />
       </div>
       <div className="body">
         {filteredRestuarants.map((restuarant) => {
