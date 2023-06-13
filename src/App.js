@@ -49,5 +49,5 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-// createRoot(el).render(<RouterProvider router={appRouter} />);
-createRoot(el).render(<RestuarantMenu />);
+createRoot(el).render(<RouterProvider router={appRouter} />);
+// createRoot(el).render(<RestuarantMenu />);

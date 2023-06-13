@@ -21,7 +21,6 @@ const RestuarantMenu = () => {
     const json = await response.json();
     setRestuarantInfo(json?.data?.cards[0]?.card?.card?.info);
     setMenuCards(json);
-    console.log(json);
   };
 
   if (restuarantInfo === null) {
@@ -55,7 +54,11 @@ const RestuarantMenu = () => {
           {avgRating} <BsFillStarFill />
         </p>
       </div>
-      <div> {itemCards.map((card) => console.log(card))} </div>
+      <div>
+        {itemCards.map((card) => (
+          <p key={card.card.info.id}>{card.card.info.name}</p>
+        ))}
+      </div>
     </>
   );
 };
