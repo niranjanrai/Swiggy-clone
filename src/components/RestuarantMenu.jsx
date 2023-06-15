@@ -4,9 +4,12 @@ import Shimmer from "./Shimmer";
 import CardExample from "./CardExample.jsx";
 import { IMG_CDN_URL } from "../Constant";
 import { BsFillStarFill } from "react-icons/bs";
+import { MENU_API_URL } from "../Constant";
 
 const RestuarantMenu = () => {
-  const { id } = useParams();
+  const { resId } = useParams();
+  console.log(resId);
+
   const [restuarantInfo, setRestuarantInfo] = useState(null);
   const [menuCards, setMenuCards] = useState(null);
 
@@ -15,9 +18,7 @@ const RestuarantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.022505&lng=72.5713621&restaurantId=52630&submitAction=ENTER"
-    );
+    const response = await fetch(MENU_API_URL + resId);
     const json = await response.json();
     setRestuarantInfo(json?.data?.cards[0]?.card?.card?.info);
     setMenuCards(json);
@@ -37,14 +38,16 @@ const RestuarantMenu = () => {
     avgRating,
   } = restuarantInfo;
 
+  // dish info
   const { itemCards } =
     menuCards?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]
       ?.card?.card;
+
   return (
     <>
       <div className="menu">
-        <h1 className="name">{name}</h1>
-        <h2 className="cuisines">{cuisines}</h2>
+        <h1 className="name">{"name"}</h1>
+        <h2 className="cuisines">{"cuisines"}</h2>
 
         <img src={IMG_CDN_URL + cloudinaryImageId} alt="name" />
         <p>{city}</p>
@@ -55,9 +58,26 @@ const RestuarantMenu = () => {
         </p>
       </div>
       <div>
-        {itemCards.map((card) => (
-          <p key={card.card.info.id}>{card.card.info.name}</p>
-        ))}
+        <ul>
+          {itemCards.map((card) => (
+            <li key={card.card.info.id}>
+              {console.log(card)}
+              {card.card.info.name}
+              <img
+                src={IMG_CDN_URL + card.card.info.imageId}
+                alt={card.card.info.name}
+              />
+              <p>
+                <strong>
+                  Price:{" "}
+                  {Math.floor(
+                    card?.card?.info?.price || card.card.info.defaultPrice / 100
+                  )}
+                </strong>
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );
