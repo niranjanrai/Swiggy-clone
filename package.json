@@ -20,6 +20,7 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.1.1",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

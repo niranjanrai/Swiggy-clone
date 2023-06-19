@@ -3,9 +3,8 @@ import { Button } from "react-bootstrap";
 import { RestuarantList } from "../Constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-import CardExample from "./CardExample";
-import { App } from "./CardExample";
 import RestuarantMenu from "./RestuarantMenu";
+import { Link } from "react-router-dom";
 
 function filterData(searchText, restuarants) {
   // filtered data
@@ -70,14 +69,16 @@ const Body = () => {
         >
           Search
         </button>
-        <RestuarantMenu />
       </div>
       <div className="body">
-        {filteredRestuarants.map((restuarant) => {
-          return (
-            <RestuarantCard {...restuarant.data} key={restuarant.data.id} />
-          );
-        })}
+        {filteredRestuarants.map((restuarant) => (
+          <Link
+            to={"/resturant/" + restuarant.data.id}
+            key={restuarant.data.id}
+          >
+            <RestuarantCard {...restuarant.data} />
+          </Link>
+        ))}
       </div>
     </>
   );

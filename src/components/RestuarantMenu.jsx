@@ -8,7 +8,6 @@ import { MENU_API_URL } from "../Constant";
 
 const RestuarantMenu = () => {
   const { resId } = useParams();
-  console.log(resId);
 
   const [restuarantInfo, setRestuarantInfo] = useState(null);
   const [menuCards, setMenuCards] = useState(null);
@@ -20,8 +19,10 @@ const RestuarantMenu = () => {
   const fetchMenu = async () => {
     const response = await fetch(MENU_API_URL + resId);
     const json = await response.json();
-    setRestuarantInfo(json?.data?.cards[0]?.card?.card?.info);
+    setRestuarantInfo(json?.data);
     setMenuCards(json);
+    console.log("restuarant info --->", restuarantInfo);
+    console.log("menucard info --->", menuCards);
   };
 
   if (restuarantInfo === null) {
@@ -36,18 +37,18 @@ const RestuarantMenu = () => {
     city,
     costForTwoMessage,
     avgRating,
-  } = restuarantInfo;
+  } = restuarantInfo?.cards[0]?.card?.card?.info || {};
 
   // dish info
   const { itemCards } =
-    menuCards?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]
-      ?.card?.card;
-
+    restuarantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
+      ?.card;
+  console.log(itemCards);
   return (
     <>
       <div className="menu">
-        <h1 className="name">{"name"}</h1>
-        <h2 className="cuisines">{"cuisines"}</h2>
+        <h1 className="name">{name}</h1>
+        <h2 className="cuisines">{cuisines}</h2>
 
         <img src={IMG_CDN_URL + cloudinaryImageId} alt="name" />
         <p>{city}</p>
@@ -61,7 +62,6 @@ const RestuarantMenu = () => {
         <ul>
           {itemCards.map((card) => (
             <li key={card.card.info.id}>
-              {console.log(card)}
               {card.card.info.name}
               <img
                 src={IMG_CDN_URL + card.card.info.imageId}
@@ -71,8 +71,8 @@ const RestuarantMenu = () => {
                 <strong>
                   Price:{" "}
                   {Math.floor(
-                    card?.card?.info?.price || card.card.info.defaultPrice / 100
-                  )}
+                    card?.card?.info?.price || card.card.info.defaultPrice
+                  ) / 100}
                 </strong>
               </p>
             </li>

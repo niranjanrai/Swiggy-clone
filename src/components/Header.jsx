@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useUserContext } from "./user_context";
 const loggedInUser = () => {
   return true;
 };
@@ -16,11 +17,12 @@ const Title = () => {
 };
 
 const Header = () => {
+  const mak = useUserContext();
+  console.log(mak);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <header>
       <Title />
-
       <div className="nav-items">
         <ul>
           <Link to="/">
@@ -37,7 +39,6 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-
       {isLoggedIn ? (
         <Button
           className="btn"

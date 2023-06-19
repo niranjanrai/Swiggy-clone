@@ -10,7 +10,12 @@ import About from "./components/About.jsx";
 import Error from "./components/Error.jsx";
 import Contact from "./components/Contact";
 import RestuarantMenu from "./components/RestuarantMenu";
+import { Auth0Provider } from "@auth0/auth0-react";
+import { StrictMode } from "react";
 const el = document.getElementById("root");
+
+// Domain: dev-vwy3rfhnxrqgerk7.us.auth0.com
+// Client: PMmAYhvgopoBGpo22qYNThTm8lQAGasN
 
 const AppLayout = () => {
   return (
@@ -48,4 +53,14 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-createRoot(el).render(<RouterProvider router={appRouter} />);
+createRoot(el).render(
+  <Auth0Provider
+    domain="dev-vwy3rfhnxrqgerk7.us.auth0.com"
+    clientId="PMmAYhvgopoBGpo22qYNThTm8lQAGasN"
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+    }}
+  >
+    <RouterProvider router={appRouter} />
+  </Auth0Provider>
+);
