@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import { RestuarantList } from "./Constant";
+import { RestuarantList } from "./config/Constant.jsx";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About.jsx";
 import Error from "./components/Error.jsx";

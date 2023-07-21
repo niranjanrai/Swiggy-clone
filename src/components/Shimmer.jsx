@@ -9,6 +9,7 @@ const Shimmer = () => {
             <div className="shimmer" key={index}>
               <div className="shi-div"></div>
               <div className="shi-div"></div>
+              <div className="shi-img"></div>
             </div>
           );
         })}

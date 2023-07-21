@@ -1,6 +1,6 @@
 import RestuarantCard from "./RestuarantCard";
 import { Button } from "react-bootstrap";
-import { RestuarantList } from "../Constant";
+import { RestuarantList } from "../config/Constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import RestuarantMenu from "./RestuarantMenu";

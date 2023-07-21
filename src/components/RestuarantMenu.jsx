@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import CardExample from "./CardExample.jsx";
-import { IMG_CDN_URL } from "../Constant";
+import { IMG_CDN_URL } from "../config/Constant";
 import { BsFillStarFill } from "react-icons/bs";
-import { MENU_API_URL } from "../Constant";
+import { MENU_API_URL } from "../config/Constant";
 
 const RestuarantMenu = () => {
   const { resId } = useParams();
@@ -44,6 +44,7 @@ const RestuarantMenu = () => {
     restuarantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
       ?.card;
   console.log(itemCards);
+  console.log(restuarantInfo);
   return (
     <>
       <div className="menu">
