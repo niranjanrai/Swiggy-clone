@@ -1,14 +1,37 @@
 import UserClass from "./UserClass";
+import { Component } from "react";
+import UserContext from "../utils/UserContext";
 
-const About = () => {
-  return (
-    <>
-      <h1>About us</h1>
-      <p>This is about us page....🎉🎉🎉🚀🚀🚀</p>
+class About extends Component {
+  constructor(props) {
+    super(props);
 
-      <UserClass name={"Niranjan Rai (class)"} location={"Gujarat"} />
-    </>
-  );
-};
+    //console.log("Parent Constructor");
+  }
+
+  componentDidMount() {
+    //console.log("Parent Component Did Mount");
+  }
+
+  render() {
+    //console.log("Parent Render");
+
+    return (
+      <div>
+        <h1>About Class Component</h1>
+        <div>
+          LoggedIn User
+          <UserContext.Consumer>
+            {({ loggedInUser }) => (
+              <h1 className="text-xl font-bold">{loggedInUser}</h1>
+            )}
+          </UserContext.Consumer>
+        </div>
+        <h2>This is Food Delivery App</h2>
+        <UserClass name={"First"} location={"Dehradun Class"} />
+      </div>
+    );
+  }
+}
 
 export default About;

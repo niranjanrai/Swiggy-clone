@@ -1,21 +1,53 @@
-import { IMG_CDN_URL } from "../config/Constant";
+import { useContext } from "react";
+import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
-const RestuarantCard = ({
-  name,
-  cuisines,
-  cloudinaryImageId,
-  avgRating,
-  sla,
-}) => {
+const RestaurantCard = (props) => {
+  const { resData } = props;
+  const { loggedInUser } = useContext(UserContext);
+
+  const {
+    cloudinaryImageId,
+    name,
+    avgRating,
+    cuisines,
+    costForTwo,
+    deliveryTime,
+  } = resData;
+  console.log(resData.costForTwo);
+
   return (
-    <div className="card">
-      <img src={`${IMG_CDN_URL}${cloudinaryImageId}`} alt="chicken"></img>
-      <h5>{name}</h5>
-      <h6> {cuisines.join(", ")} </h6>
-      <h6> {avgRating} stars </h6>
-      <p> {sla?.deliveryTime} Minutes </p>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+      <img
+        className="rounded-lg"
+        alt="res-logo"
+        src={CDN_URL + cloudinaryImageId}
+      />
+      <h3 className="font-bold py-4 text-lg">{name}</h3>
+      <h4>{cuisines.join(", ")}</h4>
+      <h4>{avgRating} stars</h4>
+      <h4>{costForTwo} FOR TWO</h4>
+      <h4>{deliveryTime} minutes</h4>
+      <h4>User : {loggedInUser} </h4>
     </div>
   );
 };
 
-export default RestuarantCard;
+// Higher Order Component
+
+// input - RestaurantCard =>> RestaurantCardPromoted
+
+export const withPromtedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
+
+export default RestaurantCard;

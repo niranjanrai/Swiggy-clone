@@ -1,29 +1,51 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { lazy, Suspense, useEffect, useState } from "react";
+import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import Footer from "./components/Footer";
-import { RestuarantList } from "./config/Constant.jsx";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import About from "./components/About.jsx";
-import Error from "./components/Error.jsx";
+//import About from "./components/About";
 import Contact from "./components/Contact";
-import RestuarantMenu from "./components/RestuarantMenu";
-import { Auth0Provider } from "@auth0/auth0-react";
-import { StrictMode } from "react";
-const el = document.getElementById("root");
+import Error from "./components/Error";
+import RestaurantMenu from "./components/RestuarantMenu";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
-// Domain: dev-vwy3rfhnxrqgerk7.us.auth0.com
-// Client: PMmAYhvgopoBGpo22qYNThTm8lQAGasN
+//import Grocery from "./components/Grocery";
+
+// Chunking
+// Code Splitting
+// Dynamic Bundling
+// lazy Loading
+// on demand loading
+// dynamix imoprt
+
+const Grocery = lazy(() => import("./components/Grocery"));
+
+const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  //authentication
+  useEffect(() => {
+    // Make an API call and send username and password
+    const data = {
+      name: "Niranjan Rai",
+    };
+    setUserName(data.name);
+  }, []);
+
   return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
 };
 
@@ -31,7 +53,6 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -39,28 +60,37 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<h1>Loading....</h1>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
         element: <Contact />,
       },
       {
-        path: "/resturant/:resId",
-        element: <RestuarantMenu />,
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<h1>Loading....</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
+    errorElement: <Error />,
   },
 ]);
 
-createRoot(el).render(
-  <Auth0Provider
-    domain="dev-vwy3rfhnxrqgerk7.us.auth0.com"
-    clientId="PMmAYhvgopoBGpo22qYNThTm8lQAGasN"
-    authorizationParams={{
-      redirect_uri: window.location.origin,
-    }}
-  >
-    <RouterProvider router={appRouter} />
-  </Auth0Provider>
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<RouterProvider router={appRouter} />);

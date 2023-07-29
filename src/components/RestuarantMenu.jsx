@@ -1,87 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import CardExample from "./CardExample.jsx";
-import { IMG_CDN_URL } from "../config/Constant";
-import { BsFillStarFill } from "react-icons/bs";
-import { MENU_API_URL } from "../config/Constant";
+import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestuarantMenu";
+import RestaurantCategory from "./RestuarantCategory";
+import { useState } from "react";
 
-const RestuarantMenu = () => {
+const RestaurantMenu = () => {
   const { resId } = useParams();
 
-  const [restuarantInfo, setRestuarantInfo] = useState(null);
-  const [menuCards, setMenuCards] = useState(null);
+  const dummy = "Dummy Data";
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
+  const resInfo = useRestaurantMenu(resId);
 
-  const fetchMenu = async () => {
-    const response = await fetch(MENU_API_URL + resId);
-    const json = await response.json();
-    setRestuarantInfo(json?.data);
-    setMenuCards(json);
-    console.log("restuarant info --->", restuarantInfo);
-    console.log("menucard info --->", menuCards);
-  };
+  const [showIndex, setShowIndex] = useState(null);
 
-  if (restuarantInfo === null) {
-    return <CardExample />;
-  }
+  if (resInfo === null) return <Shimmer />;
 
-  const {
-    name,
-    cuisines,
-    cloudinaryImageId,
-    areaName,
-    city,
-    costForTwoMessage,
-    avgRating,
-  } = restuarantInfo?.cards[0]?.card?.card?.info || {};
+  const { name, cuisines, costForTwoMessage } =
+    resInfo?.cards[0]?.card?.card?.info;
 
-  // dish info
   const { itemCards } =
-    restuarantInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card
-      ?.card;
-  console.log(itemCards);
-  console.log(restuarantInfo);
-  return (
-    <>
-      <div className="menu">
-        <h1 className="name">{name}</h1>
-        <h2 className="cuisines">{cuisines}</h2>
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-        <img src={IMG_CDN_URL + cloudinaryImageId} alt="name" />
-        <p>{city}</p>
-        <p> {areaName} </p>
-        <p> {costForTwoMessage} </p>
-        <p>
-          {avgRating} <BsFillStarFill />
-        </p>
-      </div>
-      <div>
-        <ul>
-          {itemCards.map((card) => (
-            <li key={card.card.info.id}>
-              {card.card.info.name}
-              <img
-                src={IMG_CDN_URL + card.card.info.imageId}
-                alt={card.card.info.name}
-              />
-              <p>
-                <strong>
-                  Price:{" "}
-                  {Math.floor(
-                    card?.card?.info?.price || card.card.info.defaultPrice
-                  ) / 100}
-                </strong>
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
+  const categories =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c.card?.["card"]?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  //console.log(categories);
+
+  return (
+    <div className="text-center">
+      <h1 className="font-bold my-6 text-2xl">{name}</h1>
+      <p className="font-bold text-lg">
+        {cuisines.join(", ")} - {costForTwoMessage}
+      </p>
+      {/* categories accordions */}
+      {categories.map((category, index) => (
+        // controlled component
+        <RestaurantCategory
+          key={category?.card?.card.title}
+          data={category?.card?.card}
+          showItems={index === showIndex ? true : false}
+          setShowIndex={() => setShowIndex(index)}
+          dummy={dummy}
+        />
+      ))}
+    </div>
   );
 };
 
-export default RestuarantMenu;
+export default RestaurantMenu;
